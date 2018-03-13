@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>JP Shop</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style1.css" media="screen" />
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="jquery.cycle.lite.js"></script>
+</head>
+
+<style>
+	body {font-family: Arial, Helvetica, sans-serif;}
+	* {box-sizing: border-box}
+
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 50%;
+		padding: 15px;
+		margin: 5px 0 15px 0;
+		display: inline-block;
+		height: 15px;
+	}
+
+	input[type=text]:focus, input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+
+	hr {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+	}
+
+	/* Set a style for all buttons */
+	button {
+		background-color: orange;
+		font-style: bold;
+		font-size: 14px;
+		padding: 10px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 50%;
+		opacity: 0.9;
+	}
+
+	button:hover {
+		opacity:1;
+	}
+
+	/* Float cancel and signup buttons and add an equal width */
+	.btnRegister {
+	  width: 50%;
+	}
+
+	/* Add padding to container elements */
+	.container {
+		padding: 16px;
+	}
+
+	/* Clear floats */
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+</style>
+
+<body>
+	<div style="margin-left:50px; width:100px;">
+		<br>
+		<a href="home.html"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
+	</div>
+	<div class="select_address">
+		<h4>Chọn địa chỉ giao hàng</h4>
+		<br/>
+		<span>Hãy chọn địa chỉ giao hàng cho đơn hàng này.</span><br/>
+		<span>Sau khi chọn được địa chỉ giao hàng, hãy nhấn nút 'Tiếp tục'.</span>
+		<br/>
+		<hr/>
+		<h4>Thêm địa chỉ mới</h4><br/>
+		<div class="edit_address">
+			<form action="/action_page.php">
+				<div class="container">
+					
+					<label for="name"><b>Họ và tên</b></label><br>
+					<input type="text" placeholder="Nhập họ và tên" name="name" required><br>
+					
+					<label for="email"><b>Email</b></label><br>
+					<input type="text" placeholder="Nhập email" name="email" required><br>
+
+					<label for="psw"><b>Mật khẩu</b></label><br>
+					<input type="password" placeholder="Nhập mật khẩu" name="psw" required><br>
+
+					<label for="psw-repeat"><b>Xác nhận mật khẩu</b></label><br>
+					<input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required><br>
+
+					<div class="clearfix" >
+					  <button type="submit" class="btnRegister" style="margin-left:0%;">Đăng ký</button>
+					</div>
+					
+					
+				</div>
+			</form>
+		</div>
+	</div>
+	<br/><br/>
+	
+</body>
+
+</html>

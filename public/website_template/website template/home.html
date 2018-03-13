@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>JP Shop</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style1.css" media="screen" />
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="jquery.cycle.lite.js"></script>
+</head>
+
+<body>
+	<div id="top_background">
+		<div class="main_container">
+			<div class='header_bar'>
+				<div class="logo">
+					<a href="home.html"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
+				</div>
+				<div class='search'>
+					<ul>
+						<li><input class="" id="" name="" placeholder="Nhập tên sản phẩm" value="" type="text" style='width: 60%; margin-top: 20px;'></li>
+						<li><button type="button" onclick="search('key_word')">Tìm kiếm</button></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="navigation_bar">
+				<select class="" style="width: auto; display: block; top: 0px; float: left; margin: 10px 20px;" title="Chọn danh mục sản phẩm">
+					<option onclick="location.href='home.html'" selected="selected" value="0">Tất cả danh mục sản phẩm</option>
+					<option onclick="location.href='category.html'" value="1">Audio - Video</option>
+					<option onclick="location.href='category.html'" value="2">Dụng cụ VP</option>
+					<option onclick="location.href='category.html'" value="3">Đồ chơi, Mẹ & Bé</option>
+					<option onclick="location.href='category.html'" value="4">Hàng điện tử</option>
+					<option onclick="location.href='category.html'" value="5">Hàng tiêu dùng - Thực phẩm</option>
+					<option onclick="location.href='category.html'" value="6">Nhà cửa - Đời sống</option>
+					<option onclick="location.href='category.html'" value="7">Ô tô - Xe máy - Xe đạp</option>
+					<option onclick="location.href='category.html'" value="8">Sức khỏe - Làm đẹp</option>
+					<option onclick="location.href='category.html'" value="9">Thể thao - Dã ngoại</option>
+					<option onclick="location.href='category.html'" value="10">Thời trang - Phụ kiện</option>
+					<option onclick="location.href='category.html'" value="11">Tiêu khiển</option>
+				</select>
+				<div style="border-left: 2px solid black; height:30px; float:left; margin:10px 20px"></div>
+				<ul class="navigation">
+					<!-- <li><a href="#" class='btnLogin' style="background: url('images/login_icon.png') no-repeat left center;">Đăng nhập</a></li> -->
+					<li><a href="list.html" class='btnList'>Sản phẩm đã lưu</a></li>
+					<li><a href="orders.html" class='btnOrders'>Danh sách đơn hàng</a></li>
+					<li><a href="cart.html" class='btnCart'>Giỏ hàng</a></li>
+					<li><a href="login.html" class='btnLogin'>Đăng nhập</a></li>
+				</ul>
+			</div>
+			
+			<div class="main_box">
+				<div class="content">
+					<h3>Top 5 Sản phẩm mới</h3>
+					<div class="new_products">
+						<ul>
+							<li>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
+								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4>
+							</li>
+							<li>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
+								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4>
+							</li>
+							<li>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
+								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4>
+							</li>
+							<li>
+								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
+								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4>
+							</li>
+							<li>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" />
+								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content">
+					<div class="category">
+						<h3>Category 1    <a href='category.html' style='font-size: 12px;'>Xem thêm</a></h3>
+						<ul>
+							<li><a href='#'><img src="images/screenshot 1.jpg" alt="screenshot 1" /></a></li>
+							<li><a href='#'><img src="images/screenshot 2.jpg" alt="screenshot 2" /></a></li>
+							<li><a href='#'><img src="images/screenshot 3.jpg" alt="screenshot 3" /></a></li>
+							<li><a href='#'><img src="images/screenshot 4.jpg" alt="screenshot 4" /></a></li>
+							<li><a href='#'><img src="images/screenshot 5.jpg" alt="screenshot 5" /></a></li>
+							<li><a href='#'><img src="images/screenshot 6.jpg" alt="screenshot 6" /></a></li>
+							<li><a href='#'><img src="images/screenshot 7.jpg" alt="screenshot 7" /></a></li>
+							<li><a href='#'><img src="images/screenshot 8.jpg" alt="screenshot 8" /></a></li>
+							<li><a href='#'><img src="images/screenshot 9.jpg" alt="screenshot 9" /></a></li>
+						</ul>	
+					</div>
+					
+					<div class="category">
+						<h3>Category 2    <a href='category.html' style='font-size: 12px;'>Xem thêm</a></h3>
+						<ul>
+							<li><a href='#'><img src="images/screenshot 1.jpg" alt="screenshot 1" /></a></li>
+							<li><a href='#'><img src="images/screenshot 2.jpg" alt="screenshot 2" /></a></li>
+							<li><a href='#'><img src="images/screenshot 3.jpg" alt="screenshot 3" /></a></li>
+							<li><a href='#'><img src="images/screenshot 4.jpg" alt="screenshot 4" /></a></li>
+							<li><a href='#'><img src="images/screenshot 5.jpg" alt="screenshot 5" /></a></li>
+							<li><a href='#'><img src="images/screenshot 6.jpg" alt="screenshot 6" /></a></li>
+							<li><a href='#'><img src="images/screenshot 7.jpg" alt="screenshot 7" /></a></li>
+							<li><a href='#'><img src="images/screenshot 8.jpg" alt="screenshot 8" /></a></li>
+							<li><a href='#'><img src="images/screenshot 9.jpg" alt="screenshot 9" /></a></li>
+						</ul>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="foot_cont">
+			<div class="foot_col">
+				<h3>Về website</h3>
+				<ul>
+					<li><a href="#">Giới thiệu về website</a></li>
+					<li><a href="#">Chính sách bảo hành</a></li>
+					<li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+					<li><a href="#">Thông tin liên hệ</a></li>
+				</ul>
+			</div>
+
+			<div class="foot_col">
+				<h3>Phương thức thanh toán</h3>
+				<ul>
+					<li><a href="#">Tiền mặt</a></li>
+					<li><a href="#">Chuyển khoảng</a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+
+			<div class="foot_col">
+				<h3>Hỗ trợ khách hàng</h3>
+				<ul>
+					<li><a href="#">Đặt câu hỏi</a></li>
+					<li><a href="#">Hướng dẫn đặt hàng</a></li>
+					<li><a href="#">Phương thức vận chuyển</a></li>
+					<li><a href="#">Chính sách đổi trả</a></li>
+				</ul>
+			</div>
+
+			<div class="foot_col last_col">
+				<h3>Mục tiêu</h3>
+				<p>We want to provide only hidh-quality DVD movies to our members. High-quality, easy-to-find: the best of the week.</p>
+				<span class="about_but"><a href="#">Read more about us</a></span>
+			</div>
+		</div>
+
+		<div class="credits">
+			<p>by WeGraphics - Copyright © 2010. A premium template.</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.slide').cycle({
+				fx: 'fade',
+				speed:  1500,
+				timeout: 4500
+			});
+		});
+		</script>
+	
+</body>
+
+</html>
