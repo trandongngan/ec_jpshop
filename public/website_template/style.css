@@ -1,0 +1,298 @@
+/* CSS Reset */
+/*
+.: class
+#: id
+*/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, ul, li, fieldset, form, label { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent; 
+}
+
+ol, ul { 
+	list-style: none; 
+}
+
+:focus { 
+	outline: 0; 
+}
+
+/* General */
+
+@font-face { 
+	font-family: 'DejaVuSansCondensedBook'; 
+	src:  url('DejaVuSansCondensed-webfont.ttf') format('truetype'); 
+}
+
+body { 
+	background: #f9f9f9; 
+	font: 12px "Lucida Sans Unicode", sans-serif; 
+	line-height: 1.5em; 
+	color: #555; 
+}
+
+a { 
+	text-decoration: none; 
+} 
+
+#top_background { 
+	background: url(images/top_bck.jpg) repeat-x; 
+}
+
+.main_container  { 
+	margin: 0 auto; 
+	width: 960px;  
+	background: url(images/logo_bck.png) no-repeat; 
+}
+
+/* Main-container classes */
+
+.top_bar { 
+	float: right; 
+	position: relative; 
+	top: 0px; 
+	right: -11px; 
+	width: 101px; 
+	height: 24px; 
+	background: url(images/login_bck.jpg) no-repeat; 
+	padding-left: 11px; 
+}
+
+ul.login li { 
+	display: inline; 
+	padding-left: 2px;  
+}
+ul.login li a { 
+	color: #f2f2f2; 
+	font-size: 10px; 
+}
+ul.login li a:hover { 
+	color: #89c0dd; 
+}
+
+.navigation_bar { 
+	clear: both; 
+	height: 80px; 
+	margin-bottom: 53px; 
+}
+.logo { 
+	float: left 
+}
+.logo h1 a { 
+	display: block; 
+	width: 345px; 
+	height: 50px; 
+	background: url(images/logo.png) no-repeat; 
+	text-indent: -9999px; 
+	margin: 16px 0 0 40px; 
+}
+
+ul.navigation { 
+	float: right; 
+	margin: 30px 40px 0 0; 
+}
+ul.navigation li { 
+	display: inline; 
+	margin-left: 30px; 
+}
+ul.navigation li a { 
+	color: #fff; 
+	font-size: 14px; 
+	text-shadow: 1px 1px 0px #155479; 
+}
+ul.navigation li a:hover { 
+	text-decoration: underline; 
+}
+
+/* main_box class*/
+
+.main_box { 
+	clear: both; 
+}
+
+.slide { 
+	background: #fff; 
+	-moz-border-radius: 10px; 
+	-khtml-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px; 
+	-moz-box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45); 
+	-khtml-box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45); 
+	-webkit-box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45); 
+	box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45); 
+	width: 560px; 
+	height: 274px; 
+	display: block; 
+	float: left; 
+	margin-bottom: 40px; }
+.slide img { 
+	padding: 10px; 
+}
+
+.tagline { 
+	background: url(images/slog_bck.png) no-repeat; 
+	float: left; 
+	width: 370px; 
+	margin: 25px 0 0 30px; 
+}
+.tagline h2 { 
+	font-family: 'DejaVuSansCondensedBook'; 
+	color: #fff; 
+	text-shadow: 1px 1px 0px #0f334f; 
+	font-size: 23px; 
+	line-height: 26px; 
+	font-weight: normal; 
+	letter-spacing: -1px; 
+	width: 300px; 
+	padding: 10px;
+}
+.tagline p { margin-top: 40px; padding-left: 10px; color: #0b537f; }
+
+.know_more_green a { 
+	float: right; 
+	display: block; 
+	position: relative; 
+	top: -55px; 
+	right: -6px; 
+	width: 86px; 
+	height: 74px; 
+	background: url(images/know_more_green.png) no-repeat; 
+}
+
+.cta_browse a { 
+	display: block; 
+	width: 168px; 
+	height: 56px; 
+	background: url(images/cta_blu.jpg) no-repeat 0px 0px; 
+	float: left; 
+	margin: 26px 0 0 10px;
+}
+.cta_browse a:hover { background-position: 0px -56px; }
+.cta_signup a { 
+	display: block; 
+	width: 168px; 
+	height: 56px; 
+	background: url(images/cta_blue.jpg) no-repeat 0px 0px; 
+	float: left; 
+	margin: 26px 0 0 24px; 
+}
+.cta_signup a:hover { background-position: 0px -56px; }
+
+.content { 
+	clear: both; 
+	overflow:auto; 
+	margin-bottom: 20px; 
+}
+
+.left_content { 
+	width: 280px; 
+	float: left; 
+}
+
+.blue a { color: #ed7d0f; }
+.green a { color: #5a9e28;}
+.cyan  a { color: #28819e; }
+.blue a:hover { color: #ff9e05; text-decoration: underline; }
+.green a:hover { color: #74d82b; text-decoration: underline; }
+.cyan  a:hover { color: #2fb4e0; text-decoration: underline; }
+
+.content h3 { 
+	font-size: 20px; 
+	color: #0b537f; 
+	font-weight: normal; 
+	border-bottom: 1px solid #e0e0e0; 
+	padding-bottom: 10px; 
+	margin-bottom: 20px; 
+}
+.left_content ul { margin-top: 25px; }
+.left_content ul li  { 
+	border-bottom: 1px solid #e0e0e0; 
+	padding-bottom: 8px; 
+	margin-bottom: 15px; 
+	font-size: 11px; 
+	line-height: 16px; 
+	color: #757474; 
+}
+.left_content ul li img { float: left; margin-right: 10px; }
+span.details { font-size: 10px; color: #a8a8a8;  }
+span.details a { color: #333; }
+span.details a:hover { text-decoration: underline; }
+
+.right_content { 
+	width: 630px; 
+	float: left;
+	margin-left: 50px; 
+}
+
+.box_trailer { clear: both; }
+.box_trailer img { 
+	background: #fefefe; 
+	padding: 5px; 
+	-moz-box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.35); 
+	-khtml-box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.35); 
+	-webkit-box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.35); 
+	box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.35); 
+	float: left; 
+	z-index: 100; 
+	position: relative; 
+	margin: 0 15px 30px 0; 
+}
+span.meta_info { 
+	padding: 1px 6px; 
+	color: #fefefe; 
+	z-index: 99; 
+	margin-top: 18px; 
+	position: relative; 
+	top: 8px; 
+	left: -15px; 
+	font-size: 10px; 
+}
+.meta_green { background: #5a9e28; }
+.meta_blue { background: #ed7d0f; }
+.box_trailer h4 { 
+	font-size: 16px; 
+	font-weight: normal; 
+	margin: 20px 0 10px 0; 
+}
+span.trailer_more a { 
+	display: block; 
+	width: 83px; 
+	height: 19px; 
+	background: url(images/more.jpg) no-repeat 0px 0px; 
+	float: right; 
+	margin-top: 10px; 
+}
+span.trailer_more a:hover { background-position: 0px -19px; }
+
+/* Footer */
+
+.footer { background: url(images/foot_bck.jpg) repeat-x; clear: both; }	
+
+.foot_cont { height: 218px; margin: 0 auto; width: 960px; }
+
+.foot_col { float: left; width: 220px; margin: 45px 20px 0 0; }
+.last_col  { margin-right: 0px; width: 240px; }
+.foot_col h3 { color: #cfdcf8; font-size: 14px; font-weight: normal; }
+.foot_col ul { margin: 10px 0 0 10px; }
+.foot_col ul li { padding: 4px 0 4px 20px; background: url(images/list.png) no-repeat 0px 7px; }
+.foot_col ul li a { color: #f1f3f8; font-size: 12px; }
+.foot_col ul li a:hover  { color: #89c0dd; }
+.foot_col p { color: #f1f3f8; margin-top: 10px; }
+
+span.about_but a { 
+	color: #cfdcf8; 
+	padding: 2px 5px; 
+	background: #3e5077; 
+	-moz-border-radius: 3px; 
+	margin-top: 10px; 
+	float: right; 
+	font-size: 10px;}
+span.about_but a:hover { background: #4e6188; color: #fff; }
+
+.credits { clear: both; background: #cfdcf8; margin-top: 20px; }
+.credits  p { text-align: center; font-size: 11px; color: #1c3059; padding: 8px; }

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>JP Shop</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style1.css" media="screen" />
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="jquery.cycle.lite.js"></script>
+</head>
+
+<style>
+	body {font-family: Arial, Helvetica, sans-serif;}
+	* {box-sizing: border-box}
+
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 100%;
+		padding: 15px;
+		margin: 5px 0 15px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+		height: 20px;
+	}
+
+	input[type=text]:focus, input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+
+	hr {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+	}
+
+	/* Set a style for all buttons */
+	button {
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		opacity: 0.9;
+	}
+
+	button:hover {
+		opacity:1;
+	}
+
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+		padding: 14px 20px;
+		background-color: #f44336;
+	}
+
+	/* Float cancel and signup buttons and add an equal width */
+	.cancelbtn, .signupbtn {
+	  <!-- float: center; -->
+	  width: 50%;
+	}
+
+	/* Add padding to container elements */
+	.container {
+		padding: 16px;
+	}
+
+	/* Clear floats */
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	/* Change styles for cancel button and signup button on extra small screens */
+	@media screen and (max-width: 300px) {
+		.cancelbtn, .signupbtn {
+		   width: 100%;
+		}
+	}
+</style>
+
+<body>
+	<div style="margin-left:auto; margin-right:auto; width:100px;">
+		<br>
+		<a href="#"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
+	</div>
+	<div class="login_form">
+		<form action="/action_page.php" style="border:1px solid #ccc">
+			
+			<div class="container">
+				<!-- <hr> -->
+				<h5 style="font-size:20px; margin-top:10px;">  Đăng ký tài khoản</h5>
+				<br>
+				
+				<label for="name"><b>Họ và tên</b></label>
+				<input type="text" placeholder="Nhập họ và tên" name="name" required>
+				
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Nhập email" name="email" required>
+
+				<label for="psw"><b>Mật khẩu</b></label>
+				<input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+				<label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
+				<input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+
+				<p>Khi bạn nhấn 'Đăng ký', bạn đã chấp nhận <a href="#">Điều khoản</a> và <a href="#">bảo mật</a>.</p>
+
+				<div class="clearfix" >
+				  <button type="submit" class="signupbtn" style="margin-left:0%;">Đăng ký</button>
+				</div>
+				
+				<hr>
+				
+				<p>Nếu bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+				
+			</div>
+			</form>
+	</div>
+	<br>
+	<div class="footer" style="text-align:center;">
+		<br />
+		<span><a href="#">Điều khoản sử dụng</a> | <a href="#">Thông tin bảo mật</a> | <a href="#">Giúp đỡ</a></span>
+		<!-- <ul"> -->
+			<!-- <li><a href="#">Điều khoản sử dụng</a></li> -->
+			<!-- <li><a href="#">Thông tin bảo mật</a></li> -->
+			<!-- <li><a href="#">Giúp đỡ</a></li> -->
+		<!-- </ul> -->
+		<br />
+		<br />
+	</div>
+	
+	
+	
+</body>
+
+</html>
