@@ -59,8 +59,8 @@
 
 	/* Float cancel and signup buttons and add an equal width */
 	.btnContinue1 .btnContinue2 {
-		width: 30%;
-		background-color: orange;
+	  width: 30%;
+	  <!-- margin-left: 20%; -->
 	}
 
 	/* Add padding to container elements */
@@ -76,10 +76,9 @@
 	}
 	
 	.old_address {
-		width: 50%;
+		width: 30%;
 		height: 200px;
 		margin-bottom: 20px;
-		margin-left: 20px;
 	}
 
 </style>
@@ -90,24 +89,8 @@
 		<a href="home.html"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
 	</div>
 	<div class="select_address">
-		<h4>Chọn địa chỉ giao hàng</h4>
-		<br/>
-		<span>Hãy chọn địa chỉ giao hàng cho đơn hàng này.</span><br/>
-		<span>Sau khi chọn được địa chỉ giao hàng, hãy nhấn nút 'Tiếp tục'.</span><br/><br/>
-		
-		<div class="old_address">
-			<h5>Giao hàng tới địa chỉ:</h5>
-			<textarea disabled="True" rows="6" cols="50">123 Hồ Văn Huê, phường 7, quận Phú Nhuận - Mai Quốc Văn - 0123456789</textarea>
-			<div class="clearfix" >
-				<button name="btnContinue1" onclick="continue1()" style="margin-left:0%;">Tiếp tục</button><br>
-				<button name="btnDelete" onclick="deleteAddress()" style="width:15%;">Delete</button>
-				<button name="btnEdit" onclick="window.location.href='edit_address.html'" style="width:15%;">Edit</button>
-			</div>
-		</div>
-		
-		<br/>
 		<hr/>
-		<h4>Thêm địa chỉ giao hàng mới</h4><br/>
+		<h4>Cập nhật địa chỉ giao hàng</h4><br/>
 		<div class="edit_address">
 			<form action="/action_page.php">
 				<div class="container">
@@ -137,53 +120,16 @@
 					<input type="text" placeholder="Nhập số điện thoại" name="phone" required><br>
 
 					<div class="clearfix" >
-					  <button name="btnContinue2" onclick="continue2()" style="margin-left:0%;">Tiếp tục</button>
+					  <button name="btnSave" onclick="updateShippingAddress()" style="margin-left:0%;">Lưu</button>
 					</div>
-					<div id="test"></div>
-					
 					<script>
-						// địa chỉ củ
-						function continue1() {
-							//lấy thông tin địa chỉ
-							// ???
+						// Update the address
+						function updateShippingAddress(prod_id) {
+							// update shipping address in database
 							
-							//redirect to order_purchase.html
-							window.location.replace('order_purchase.html');
+							//redirect to select_address.html
+							window.location.replace('select_address.html');
 						}
-						
-						// địa chỉ mới
-						function continue2() {
-							//lấy thông tin địa chỉ
-							// ???
-							
-							//redirect to order_purchase.html
-							window.location.replace('order_purchase.html');
-						}
-						
-						// xóa địa chỉ
-						function deleteAddress() {
-							// step 1: xóa thông tin địa chỉ được lưu dưới database
-							// step 2: reload lại select_address.html page
-						}
-						
-						// chọn quận/huyện -> display phường/xã
-						function selectDistrict() {
-							var district = document.getElementById("district").value;
-							var select_option = "";
-							
-							switch(district) {
-								case '1':
-									select_option += "<option value='24'>Huyện Cần Giờ</option>";
-							}
-							
-							
-							
-							<!-- select_option += </select> -->
-							
-							document.getElementById("ward").innerHTML = select_option;
-						}
-						
-						
 					</script>
 					
 				</div>
