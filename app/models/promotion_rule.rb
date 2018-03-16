@@ -1,0 +1,2 @@
+class PromotionRule < ApplicationRecord
+end

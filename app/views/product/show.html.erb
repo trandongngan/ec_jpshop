@@ -1,0 +1,98 @@
+<br />
+<div class="product_main_box">
+  <br />
+  <div class="product_assets">
+    <h3 style="font-size:24px; color:orange;">Kirkland Signature Extra Strength Glucosamine HCI 1500mg, With MSM 1500 mg, 375-Count Tablets</h3>
+    <div class="btnAddToListCart">
+      <button onclick="window.location.href='offer_list.html'">Offer list</button><br/><br/>
+      <button id="btnAddToList" onclick="addToList()">Lưu sản phẩm</button>
+      <span id="save_confirm" style="display:none;"><img src="/assets/confirm_icon.jpg" alt="JP Shop" style="width:auto; height:12px;"/>Đã thêm vào list</span>
+    </div>
+    <br />
+    <div>
+      <div>
+        <img id="displayed_image" src="/assets/screenshot 1.jpg" style="float:center; display:block; margin-left:auto; margin-right:auto;"/>
+      </div>
+      <!-- <div style="margin-right:20px; float:center;"> -->
+        <!-- <button id="btnAddList" onclick="addList()">Add to list</button> -->
+        <!-- <button id="btnAddCart" onclick="addCart()">Add to cart</button> -->
+      <!-- </div> -->
+    </div>
+    <ul>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 1.jpg')"><img src="/assets/screenshot 1.jpg" alt="screenshot 1" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 2.jpg')"><img src="/assets/screenshot 2.jpg" alt="screenshot 2" onclick="displayImage('/assets/screenshot 2.jpg')" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 3.jpg')"><img src="/assets/screenshot 3.jpg" alt="screenshot 3" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 4.jpg')"><img src="/assets/screenshot 4.jpg" alt="screenshot 4" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 5.jpg')"><img src="/assets/screenshot 5.jpg" alt="screenshot 5" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 6.jpg')"><img src="/assets/screenshot 6.jpg" alt="screenshot 6" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 7.jpg')"><img src="/assets/screenshot 7.jpg" alt="screenshot 7" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 8.jpg')"><img src="/assets/screenshot 8.jpg" alt="screenshot 8" /></a></li>
+      <li><a href='#' onclick="displayImage('/assets/screenshot 9.jpg')"><img src="/assets/screenshot 9.jpg" alt="screenshot 9" /></a></li>
+    </ul>
+  </div>
+  <div class="product_content">
+    <button class="tablink" onclick="openTab('product_about', this, '#777')" id="defaultOpen">Giới thiệu</button>
+    <button class="tablink" onclick="openTab('product_desc', this, '#777')">Mô tả</button>
+    <button class="tablink" onclick="openTab('product_detail', this, '#777')">Chi tiết</button>
+    <button class="tablink" onclick="openTab('product_notes', this, '#777')">Lưu ý</button>
+    <div id="product_about" class="tabcontent">
+      <h3>Giới thiệu</h3>
+      <p>MSM is a bioavailable sulfur.</p>
+      <p>Sulfur is a necessity.</p>
+      <p>Component that works in conjunction with Glucosamine to provide the building blocks of collagen.</p>
+      <p>An important component of healthy joints and connective tissue.</p>
+    </div>
+    <div id="product_desc" class="tabcontent">
+      <h3>Mô tả</h3>
+      <p>Glucosamine is needed for healthy structure and function of joints for optimum mobility.</p>
+    </div>
+    <div id="product_detail" class="tabcontent">
+      <h3>Chi tiết</h3>
+      <p>Thông tin chi tiết về sản phẩm</p>
+    </div>
+    <div id="product_notes" class="tabcontent">
+      <h3>Lưu ý</h3>
+      <p>Legal Disclaimer</p>
+      <p>Actual product packaging and materials may contain more and different information than what is shown on our website. We recommend that you do not rely solely on the information presented and that you always read labels, warnings, and directions before using or consuming a product. Please see our full disclaimer below. </p>
+    </div>
+  </div>
+  <script>
+    // display other tab
+    function openTab(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    // Diplay image
+    function displayImage(imagePath) {
+      var displayedImage = document.getElementById('displayed_image');
+      displayedImage.src = imagePath;
+      <!-- displayedImage.alt = imagePath; -->
+    }
+
+    // them vao list
+    function addToList() {
+      var addToList, saveConfirm;
+      //disable button
+      addToList = document.getElementById("btnAddToList");
+      addToList.style = 'display:none';
+
+      //enable confirm message
+      saveConfirm = document.getElementById("save_confirm");
+      saveConfirm.style = '';
+
+    }
+  </script>
+</div>
