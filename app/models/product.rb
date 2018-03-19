@@ -6,6 +6,7 @@ class Product < ApplicationRecord
 
   has_many :image
   has_many :product_properties
+  has_many :favorites
 
   belongs_to :category
 

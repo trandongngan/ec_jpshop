@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
     create_table :products do |t|
       t.string   :name
       t.text     :description
+      t.text     :about
       t.integer  :category_id
       t.string   :code, limit: 20
       t.datetime :available_on
