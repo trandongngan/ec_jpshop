@@ -19,8 +19,8 @@
 				</div>
 				<div class='search'>
 					<ul>
-						<li><input class="" id="" name="" placeholder="Nhập tên sản phẩm" value="" type="text" style='width: 60%; margin-top: 20px;'></li>
-						<li><button type="button" onclick="search('key_word')">Tìm kiếm</button></li>
+						<li><input class="" id="key_word" name="" placeholder="Nhập tên sản phẩm" value="" type="text" style='width: 60%; margin-top: 20px;'></li>
+						<li><button id='btnSearch' type="button" onclick="search()">Tìm kiếm</button></li>
 					</ul>
 				</div>
 			</div>
@@ -157,6 +157,20 @@
 				timeout: 4500
 			});
 		});
+		
+		// add 'enter' event for input
+		var input = document.getElementById("key_word");
+		input.addEventListener("keyup", function(event) {
+			event.preventDefault();
+			if (event.keyCode === 13) {
+				document.getElementById("btnSearch").click();
+			}
+		});
+		
+		function search() {
+			//alert(input.value);
+			window.location.replace('results.html?key_word=' + input.value);
+		}
 		</script>
 	
 </body>

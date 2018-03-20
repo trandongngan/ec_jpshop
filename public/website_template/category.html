@@ -19,8 +19,8 @@
 				</div>
 				<div class='search'>
 					<ul>
-						<li><input class="" id="" name="" placeholder="Nhập tên sản phẩm" value="" type="text" style='width: 60%; margin-top: 20px;'></li>
-						<li><button type="button" onclick="search('key_word')">Tìm kiếm</button></li>
+						<li><input class="" id="key_word" name="" placeholder="Nhập tên sản phẩm" value="" type="text" style='width: 60%; margin-top: 20px;'></li>
+						<li><button id='btnSearch' type="button" onclick="search()">Tìm kiếm</button></li>
 					</ul>
 				</div>
 			</div>
@@ -42,7 +42,6 @@
 				</select>
 				<div style="border-left: 2px solid black; height:30px; float:left; margin:10px 20px"></div>
 				<ul class="navigation">
-					<!-- <li><a href="#" class='btnLogin' style="background: url('images/login_icon.png') no-repeat left center;">Đăng nhập</a></li> -->
 					<li><a href="list.html" class='btnList'>Sản phẩm đã lưu</a></li>
 					<li><a href="orders.html" class='btnOrders'>Danh sách đơn hàng</a></li>
 					<li><a href="cart.html" class='btnCart'>Giỏ hàng</a></li>
@@ -60,39 +59,39 @@
 					<div class="list_product">
 						<ul>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 2" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 2" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 3" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 3" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 4" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 4" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 5" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 5" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 							<li>
-								<a href='#'><img src="images/screenshot 1.png" alt="screenshot 6" /></a>
-								<h4 class="orange"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 6" /></a>
+								<h4 class="orange"><a href="detail.html">The first movie this week</a></h4>
+								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
 								<br /><span class="price">100.000 nvd</span>
 							</li>
 						</ul>	
@@ -158,6 +157,20 @@
 				timeout: 4500
 			});
 		});
+		
+		// add 'enter' event for input
+		var input = document.getElementById("key_word");
+		input.addEventListener("keyup", function(event) {
+			event.preventDefault();
+			if (event.keyCode === 13) {
+				document.getElementById("btnSearch").click();
+			}
+		});
+		
+		function search() {
+			//alert(input.value);
+			window.location.replace('results.html?key_word=' + input.value);
+		}
 		</script>
 	
 </body>
