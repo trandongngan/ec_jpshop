@@ -17,12 +17,10 @@
 	/* Full-width input fields */
 	input[type=text], input[type=password] {
 		width: 100%;
-		padding: 15px;
-		margin: 5px 0 15px 0;
+		padding: 5px;
+		margin: 5px 0 10px 0;
 		display: inline-block;
-		border: none;
-		background: #f1f1f1;
-		height: 20px;
+		height: 40px;;
 	}
 
 	input[type=text]:focus, input[type=password]:focus {
@@ -37,9 +35,10 @@
 
 	/* Set a style for all buttons */
 	button {
-		background-color: #4CAF50;
-		color: white;
-		padding: 14px 20px;
+		background-color: orange;
+		font-style: bold;
+		font-size: 14px;
+		padding: 10px 20px;
 		margin: 8px 0;
 		border: none;
 		cursor: pointer;
@@ -51,16 +50,9 @@
 		opacity:1;
 	}
 
-	/* Extra styles for the cancel button */
-	.cancelbtn {
-		padding: 14px 20px;
-		background-color: #f44336;
-	}
-
 	/* Float cancel and signup buttons and add an equal width */
-	.cancelbtn, .signupbtn {
-	  <!-- float: center; -->
-	  width: 50%;
+	.btnRegister {
+	  width: 100%;
 	}
 
 	/* Add padding to container elements */
@@ -75,18 +67,12 @@
 		display: table;
 	}
 
-	/* Change styles for cancel button and signup button on extra small screens */
-	@media screen and (max-width: 300px) {
-		.cancelbtn, .signupbtn {
-		   width: 100%;
-		}
-	}
 </style>
 
 <body>
 	<div style="margin-left:auto; margin-right:auto; width:100px;">
 		<br>
-		<a href="#"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
+		<a href="home.html"><img src="images\jp_shop_logo.png" alt="JP Shop"/></a>
 	</div>
 	<div class="login_form">
 		<form action="/action_page.php" style="border:1px solid #ccc">
@@ -108,15 +94,15 @@
 				<label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
 				<input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
 
-				<p>Khi bạn nhấn 'Đăng ký', bạn đã chấp nhận <a href="#">Điều khoản</a> và <a href="#">bảo mật</a>.</p>
+				<p>Khi bạn nhấn <b>"Đăng ký"</b>, bạn đã chấp nhận <a href="#">Điều khoản</a> và <a href="#">bảo mật</a>.</p>
 
 				<div class="clearfix" >
-				  <button type="submit" class="signupbtn" style="margin-left:0%;">Đăng ký</button>
+				  <button type="submit" class="btnRegister" style="margin-left:0%;">Đăng ký</button>
 				</div>
 				
 				<hr>
 				
-				<p>Nếu bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+				<p>Nếu bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
 				
 			</div>
 			</form>
@@ -125,11 +111,6 @@
 	<div class="footer" style="text-align:center;">
 		<br />
 		<span><a href="#">Điều khoản sử dụng</a> | <a href="#">Thông tin bảo mật</a> | <a href="#">Giúp đỡ</a></span>
-		<!-- <ul"> -->
-			<!-- <li><a href="#">Điều khoản sử dụng</a></li> -->
-			<!-- <li><a href="#">Thông tin bảo mật</a></li> -->
-			<!-- <li><a href="#">Giúp đỡ</a></li> -->
-		<!-- </ul> -->
 		<br />
 		<br />
 	</div>
