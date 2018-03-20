@@ -27,18 +27,18 @@
 
 			<div class="navigation_bar">
 				<select class="" style="width: auto; display: block; top: 0px; float: left; margin: 10px 20px;" title="Chọn danh mục sản phẩm">
-						<option selected="selected" value="0">Tất cả danh mục sản phẩm</option>
-						<option value="1">Audio - Video</option>
-						<option value="2">Dụng cụ VP</option>
-						<option value="3">Đồ chơi, Mẹ & Bé</option>
-						<option value="4">Hàng điện tử</option>
-						<option value="5">Hàng tiêu dùng - Thực phẩm</option>
-						<option value="6">Nhà cửa - Đời sống</option>
-						<option value="7">Ô tô - Xe máy - Xe đạp</option>
-						<option value="8">Sức khỏe - Làm đẹp</option>
-						<option value="9">Thể thao - Dã ngoại</option>
-						<option value="10">Thời trang - Phụ kiện</option>
-						<option value="11">Tiêu khiển</option>
+					<option onclick="location.href='home.html'" selected="selected" value="0">Tất cả danh mục sản phẩm</option>
+					<option id='cat1' onclick="location.href='category.html?cat_id=1'" value="1">Audio - Video</option>
+					<option id='cat2' onclick="location.href='category.html?cat_id=2'" value="2">Dụng cụ VP</option>
+					<option id='cat3' onclick="location.href='category.html?cat_id=3'" value="3">Đồ chơi, Mẹ & Bé</option>
+					<option id='cat4' onclick="location.href='category.html?cat_id=4'" value="4">Hàng điện tử</option>
+					<option id='cat5' onclick="location.href='category.html?cat_id=5'" value="5">Hàng tiêu dùng - Thực phẩm</option>
+					<option id='cat6' onclick="location.href='category.html?cat_id=6'" value="6">Nhà cửa - Đời sống</option>
+					<option id='cat7' onclick="location.href='category.html?cat_id=7'" value="7">Ô tô - Xe máy - Xe đạp</option>
+					<option id='cat8' onclick="location.href='category.html?cat_id=8'" value="8">Sức khỏe - Làm đẹp</option>
+					<option id='cat9' onclick="location.href='category.html?cat_id=9'" value="9">Thể thao - Dã ngoại</option>
+					<option id='cat10' onclick="location.href='category.html?cat_id=10'" value="10">Thời trang - Phụ kiện</option>
+					<option id='cat11' onclick="location.href='category.html?cat_id=11'" value="11">Tiêu khiển</option>
 				</select>
 				<div style="border-left: 2px solid black; height:30px; float:left; margin:10px 20px"></div>
 				<ul class="navigation">
@@ -157,6 +157,7 @@
 				timeout: 4500
 			});
 		});
+		
 		
 		// add 'enter' event for input
 		var input = document.getElementById("key_word");

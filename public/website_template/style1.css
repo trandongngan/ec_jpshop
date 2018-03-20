@@ -42,7 +42,7 @@ a {
 } 
 
 #top_background { 
-	background: url(images/top_bck.jpg) repeat-x; 
+	/* background: url(images/top_bck.jpg) repeat-x;  */
 }
 
 .main_container  { 
@@ -382,7 +382,7 @@ span.trailer_more a:hover { background-position: 0px -19px; }
 .last_col  { margin-right: 0px; width: 240px; }
 .foot_col h3 { color: white; font-style: bold; font-size: 14px; font-weight: normal; }
 .foot_col ul { margin: 10px 0 0 10px; }
-.foot_col ul li { padding: 4px 0 4px 20px; background: url(images/list.png) no-repeat 0px 7px; }
+.foot_col ul li { padding: 4px 0 4px 20px; }
 .foot_col ul li a { color: white; font-size: 12px; }
 .foot_col ul li a:hover  { color: #3374ff; }
 .foot_col p { color: #f1f3f8; margin-top: 10px; }
