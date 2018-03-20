@@ -467,13 +467,15 @@ span.about_but a:hover { background: #4e6188; color: #fff; }
 	margin-left: 5%;
 }
 ul.tblRow {
-	border-bottom: 1px solid #e0e0e0;
+	/* border-bottom: 1px solid #e0e0e0; */
 	margin-top: 20px;
+	margin-left: 20px;
 }
 .offer_list_content ul li {
 	display: inline-block;
+	border-bottom: 1px solid #e0e0e0;
 	width: 19%;
-	/* vertical-align: middle; */
+	
 }
 ul.tblHeader li {
 	font-size: 16px;
@@ -596,3 +598,39 @@ ul.tblRow li {
 	
 }
 
+/*orders.html*/
+.orders {
+	width: 95%;
+	margin-left: 5%;
+}
+ul.tblRow {
+	margin-top: 15px;
+	margin-left: 20px;
+}
+.orders ul li {
+	display: inline-block;
+	border-bottom: 1px solid #e0e0e0;
+	width: 30%;
+}
+ul.tblHeader li {
+	font-size: 16px;
+	font-style: bold;
+	color: black;
+	background-color: orange;
+	text-align: center;
+}
+ul.tblRow li {
+	font-size: 16px;
+	font-style: bold;
+	color: black;
+}
+.order_id {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.order_id h3 {
+	font-size: 20px;
+	float: left;
+	margin-right: 10px;
+	
+}

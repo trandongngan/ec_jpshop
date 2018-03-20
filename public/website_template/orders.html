@@ -42,6 +42,7 @@
 				</select>
 				<div style="border-left: 2px solid black; height:30px; float:left; margin:10px 20px"></div>
 				<ul class="navigation">
+					<!-- <li><a href="#" class='btnLogin' style="background: url('images/login_icon.png') no-repeat left center;">Đăng nhập</a></li> -->
 					<li><a href="list.html" class='btnList'>Sản phẩm đã lưu</a></li>
 					<li><a href="orders.html" class='btnOrders'>Danh sách đơn hàng</a></li>
 					<li><a href="cart.html" class='btnCart'>Giỏ hàng</a></li>
@@ -50,68 +51,85 @@
 			</div>
 			
 			<div class="category_bar">
-				<!-- <span class="category_content">Category 1</span> -->
-				<h1 class="category_content">Những sản phẩm đã lưu</h1>
+				<h1 class="category_content">Danh sách các đơn hàng bạn đã mua</h1>
 			</div>
 				
-			<div class="main_box">
-				<div class="content">
-					<div class="list">
-						<ul>
-							<li>
-								<div>
-									<button onclick="window.location.href='offer_list.html'" style="width:100%;">Offer list</button><br/><br/>
-									<button id='btnDeleteFromList1' onclick="deleteFromList('1')" style="width:100%;">Xóa</button>
-								</div>
-								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 1" /></a>
-								<h4 class="blue"><a href="#">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
-								<br /><span class="price_result">100.000 vnd</span>
-								<br /><br /><span>Tóm tắt:</span>
-									<br /><span>- Fist item</span>
-									<br /><span>- Second item</span>
-									<br /><span>- Third item</span>
-							</li>
-							<li>
-								<div>
-									<button onclick="window.location.href='offer_list.html'" style="width:100%;">Offer list</button><br/><br/>
-									<button id='btnDeleteFromList2' onclick="deleteFromList('2')" style="width:100%;">Xóa</button>
-								</div>
-								<a href='detail.html'><img src="images/screenshot 1.png" alt="screenshot 2" /></a>
-								<h4 class="blue"><a href="detail.html">The first movie this week</a></h4>
-								<span class="details">n_stars | n_reviews | <a href="detail.html">more...</a></span>
-								<br /><span class="price_result">100.000 vnd</span>
-							</li>
-						</ul>
-				<script>
-					
-										
-					// delete product from saved list
-					function deleteFromList(prod_id) {
-						// remove item in 'list' table
-						
-						// do not display the product in list page
-						var li_parent;
-						li_parent = document.getElementById("btnDeleteFromList" + prod_id).parentElement.parentElement;
-						li_parent.style = 'display:none';
-					}
-				</script>
+			<div>
+				<div class="orders">
+					<div class="order_id">
+						<h3>Order_ID 1</h3> | Order date: 20/03/2018
 					</div>
-					
+					<ul class="tblHeader">
+						<li>Sản Phẩm</li>
+						<li>Giá</li>
+						<li>Số lượng</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=111'>Glucosamine 111</a></li>
+						<li>550.000 vnd</li>
+						<li>5</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=222'>Glucosamine 222</a></li>
+						<li>650.000 vnd</li>
+						<li>25</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=333'>Glucosamine 333</a></li>
+						<li>350.000 vnd</li>
+						<li>15</li>
+					</ul>
+				</div>
+				<div class="orders">
+					<div class="order_id">
+						<h3>Order_ID 2</h3> | Order date: 22/03/2018
+					</div>
+					<ul class="tblHeader">
+						<li>Sản Phẩm</li>
+						<li>Giá</li>
+						<li>Số lượng</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=444'>Glucosamine 444</a></li>
+						<li>550.000 vnd</li>
+						<li>5</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=555'>Glucosamine 555</a></li>
+						<li>650.000 vnd</li>
+						<li>25</li>
+					</ul>
+					<ul class="tblRow">
+						<li><a href='detail.html?prod_id=666'>Glucosamine 666</a></li>
+						<li>350.000 vnd</li>
+						<li>15</li>
+					</ul>
 				</div>
 			</div>
+			<script>
+				// add to cart
+				function addToCart() {
+					// insert data into cart table
+					
+					//redirect to cart.html
+					<!-- window.location.replace('cart.html'); -->
+					
+				}
+			</script>
+			
 		</div>
 	</div>
 	
+	<br />
 	<div class="footer">
 		<div class="foot_cont">
 			<div class="foot_col">
 				<h3>Về website</h3>
 				<ul>
-					<li><a href="sorry.html">Giới thiệu về website</a></li>
-					<li><a href="sorry.html">Chính sách bảo hành</a></li>
-					<li><a href="sorry.html">Chính sách giải quyết khiếu nại</a></li>
-					<li><a href="sorry.html">Thông tin liên hệ</a></li>
+					<li><a href="#">Giới thiệu về website</a></li>
+					<li><a href="#">Chính sách bảo hành</a></li>
+					<li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+					<li><a href="#">Thông tin liên hệ</a></li>
 				</ul>
 			</div>
 
@@ -129,10 +147,10 @@
 			<div class="foot_col">
 				<h3>Hỗ trợ khách hàng</h3>
 				<ul>
-					<li><a href="sorry.html">Đặt câu hỏi</a></li>
-					<li><a href="sorry.html">Hướng dẫn đặt hàng</a></li>
-					<li><a href="sorry.html">Phương thức vận chuyển</a></li>
-					<li><a href="sorry.html">Chính sách đổi trả</a></li>
+					<li><a href="#">Đặt câu hỏi</a></li>
+					<li><a href="#">Hướng dẫn đặt hàng</a></li>
+					<li><a href="#">Phương thức vận chuyển</a></li>
+					<li><a href="#">Chính sách đổi trả</a></li>
 				</ul>
 			</div>
 
@@ -142,7 +160,6 @@
 				<span class="about_but"><a href="#">Read more about us</a></span>
 			</div>
 		</div>
-
 	</div>
 	
 	<script type="text/javascript">
