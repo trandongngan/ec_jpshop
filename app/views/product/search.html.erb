@@ -1,2 +1,22 @@
-<h1>Product#search</h1>
-<p>Find me in app/views/product/search.html.erb</p>
+<div class="category_bar">
+  <!-- <span class="category_content">Category 1</span> -->
+  <h1 class="category_content"><a href="home.html">JP Shop</a> > Category 1</h1>
+</div>
+
+<div class="main_box">
+  <div class="content">
+    <div class="list_product">
+      <ul>
+        <%@products.each do |product|%>
+        <li>
+          <a href='<%="/#{product.id}/#{product.slug}"%>'><img src="assets\screenshot 1.png" alt="screenshot 1" /></a>
+          <h4 class="orange"><a href="#"><%=product.name%></a></h4>
+          <span class="details">n_stars | n_reviews | <a href="<%="/#{product.id}/#{product.slug}"%>">more...</a></span>
+          <br /><span class="price">100.000 nvd</span>
+        </li>
+        <%end%>
+      </ul>
+    </div>
+
+  </div>
+</div>

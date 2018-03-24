@@ -29,9 +29,8 @@ namespace :jpshop do
       row = Hash[[header, spreadsheet.row(i)].transpose]
 
       product_id = row['product_id']
-      product = Product.find_by_id(product_id)
 
-      next if Category.find_by_id(row['category_id']).blank?
+      next if Category.find_by(id: row['category_id1']).blank?
 
       Product.transaction do
         data = {
@@ -42,6 +41,7 @@ namespace :jpshop do
           category_id: row['category_id1']
         }
 
+        product = Product.find_by_id(product_id)
         unless product.blank?
           product.update_attributes(data)
         else

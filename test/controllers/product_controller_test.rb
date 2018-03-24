@@ -11,4 +11,14 @@ class ProductControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get add_to_cart" do
+    get product_add_to_cart_url
+    assert_response :success
+  end
+
+  test "should get add_to_favorite" do
+    get product_add_to_favorite_url
+    assert_response :success
+  end
+
 end

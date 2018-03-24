@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  post 'session/login', to: "session#create"
+
+  get 'my/login'
+
+  get 'my/register'
+
+  get 'product/add_to_cart'
+
+  get 'product/add_to_favorite'
+
   get ':product_id/:slug' => 'product#show', as: 'show'
 
-  get 'product/search'
+  get ':slug' => 'product#search', as: 'search'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
 end

@@ -13,4 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-Rails.application.config.assets.precompile += %w( style1.css jquery-3.3.1 jquery.cycle.lite )
+Rails.application.config.assets.precompile += %w( style1.css jquery-3.3.1 jquery.cycle.lite jquery-3.3.1.min.js application.js)
