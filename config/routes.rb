@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  post 'session/login', to: "session#create"
+  post 'session/login' => "session#create"
 
   get 'my/login'
 
   get 'my/register'
+
+  post 'my/register' => 'my#create', as: 'create'
 
   get 'product/add_to_cart'
 

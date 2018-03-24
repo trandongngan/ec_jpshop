@@ -34,9 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def auto_login!
-    return if auth_token.blank?
-
-    @current_user ||= User.find(auth_token[:user_id])
+    @current_user ||= User.find(auth_token[:user_id]) unless auth_token.blank?
   end
 
   private
