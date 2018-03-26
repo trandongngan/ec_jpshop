@@ -12,7 +12,7 @@ end
 namespace :jpshop do
   desc "Import (create or update) product"
   task import_products: :environment do
-    spreadsheets = readExcel(File.join(Rails.root.join "db", "data", "products.xlsx"))
+    spreadsheets = readExcel(File.join(Rails.root.join "db", "data", "products1.xlsx"))
 
     ## import categories
     spreadsheet = spreadsheets.sheet('Category')
@@ -63,11 +63,59 @@ namespace :jpshop do
 
             next if tmp[0].blank? || tmp[1].blank?
 
-            property = Property.find_or_create_by(name: tmp[0], value: tmp[1])
+            property = Property.find_or_create_by(name: tmp.shift, value: tmp.join(''))
             ProductProperty.create({product_id: product_id, property_id: property.id})
           end
         end
       end
     end
+  end
+  desc "Import seller"
+  task import_sellers_test: :environment do
+    User.where(role: :seller).destroy_all
+    [*1..20].each do |i|
+      User.create(
+        {
+          username: "Seller #{i}",
+          email: "seller#{i}@jpshop.com",
+          password: "1qazxsw2",
+          password_confirmation: "1qazxsw2",
+          role: :seller
+        }
+      )
+    end
+
+    sellers = User.where(role: :seller)
+    Product.all.each do |pro|
+      SellerOrders.where(product_id: pro.id).destroy_all
+      SellerProduct.where(product_id: pro.id).destroy_all
+
+      sellers.each do |sel|
+        SellerOrders.create!(
+          seller_id: sel.id,
+          product_id: pro.id,
+          number: (sel.id * 1000).to_s,
+          amount: 100
+        )
+
+        SellerProduct.create!(
+          {
+            seller_id: sel.id,
+            product_id: pro.id,
+            price: rand(50000..100000),
+            status: SellerProduct::DEFAULT_SELL_STATUS
+          }
+        )
+      end
+    end
+  end
+  desc "prepare data test"
+  task prepare_data_test: :environment do
+    system("cd #{Rails.root}")
+    system("bundle exec rake db:drop")
+    system("bundle exec rake db:create")
+    system("bundle exec rake db:migrate")
+    system("bundle exec rake jpshop:import_products")
+    system("bundle exec rake jpshop:import_sellers_test")
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322070014) do
+ActiveRecord::Schema.define(version: 20180326024734) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "first_name"
@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 20180322070014) do
   end
 
   create_table "properties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
-    t.string "name"
+    t.text "name"
     t.text "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -148,13 +148,24 @@ ActiveRecord::Schema.define(version: 20180322070014) do
     t.string "number", limit: 35
     t.integer "item_total"
     t.integer "amount"
-    t.integer "shipping_id", null: false
+    t.integer "shipping_id"
     t.integer "promotion_id"
     t.string "approver_name"
     t.integer "approver_id"
     t.datetime "approved_at"
     t.integer "canceler_id"
     t.datetime "canceled_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "seller_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.integer "seller_id"
+    t.integer "product_id"
+    t.float "price", limit: 24
+    t.integer "shipping_id"
+    t.integer "promotion_id"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'babosa', '~> 1.0', '>= 1.0.2'
 gem 'jwt'
+gem 'enumerize'

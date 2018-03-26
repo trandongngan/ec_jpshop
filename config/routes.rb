@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'product/add_to_favorite'
 
-  get ':product_id/:slug' => 'product#show', as: 'show'
+  get ':product_id/:slug' => 'product#offer_list'
+
+  get ':product_id/detail/:slug' => 'product#show'
 
   get ':slug' => 'product#search', as: 'search'
 

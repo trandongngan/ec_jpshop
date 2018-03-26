@@ -1,2 +1,0 @@
-class SellerOrder < ApplicationRecord
-end
