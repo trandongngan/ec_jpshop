@@ -9,7 +9,7 @@
       <ul>
         <%@products.each do |product|%>
         <li>
-          <a href='<%="/#{product.id}/#{product.slug}"%>'><img src="assets\screenshot 1.png" alt="screenshot 1" /></a>
+          <a href='<%="/#{product.id}/#{product.slug}"%>'><img src="<%=product.image_path%>" alt="<%=product.name%>" /></a>
           <h4 class="orange"><a href="#"><%=product.name%></a></h4>
           <span class="details">n_stars | n_reviews | <a href="<%="/#{product.id}/#{product.slug}"%>">more...</a></span>
           <br /><span class="price">100.000 nvd</span>

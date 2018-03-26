@@ -1,8 +1,8 @@
 <div class="offer_list">
   <div class="offer_list_header">
-    <a href='#'><img src="images/screenshot 1.png" alt="screenshot 1"/></a>
-    <h4 class="orange"><a href="#">The first movie this week</a></h4>
-    <span class="details">n_stars | n_reviews | <a href="#">more...</a></span>
+    <a href="<%="/#{@product.id}/detail/#{@product.slug}"%>"><img src="<%=@product.image_path%>" alt="screenshot 1"/></a>
+    <h4 class="orange"><a href="<%="/#{@product.id}/detail/#{@product.slug}"%>"><%=@product.name%></a></h4>
+    <span class="details">n_stars | n_reviews | <a href="<%="/#{@product.id}/detail/#{@product.slug}"%>">more...</a></span>
   </div>
   <br/>
   <div class="offer_list_content">
@@ -13,26 +13,14 @@
       <li>Ngườiß bán</li>
       <li>Mua sản phẩm</li>
     </ul>
+    <% @offers.each do |offer| %>
     <ul class="tblRow">
-      <li>1.000.000 vnđ</li>
+      <li><%=offer.price%> vnđ</li>
       <li>Miễn phí</li>
       <li>Thành phố HCM</li>
       <li>Cty TNHH ABCD</li>
       <li><button id="btnAddToCart" onclick="addToCart()">Chọn mua</button></li>
     </ul>
-    <ul class="tblRow">
-      <li>1.500.000 vnđ</li>
-      <li>Miễn phí</li>
-      <li>Thành phố HCM</li>
-      <li>Cty Onclick</li>
-      <li><button id="btnAddToCart" onclick="addToCart()">Chọn mua</button></li>
-    </ul>
-    <ul class="tblRow">
-      <li>1.100.000 vnđ</li>
-      <li>Miễn phí</li>
-      <li>Thành phố HCM</li>
-      <li>Cty TNHH VC</li>
-      <li><button id="btnAddToCart" onclick="addToCart()">Chọn mua</button></li>
-    </ul>
+    <% end %>
   </div>
 </div>

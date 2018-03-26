@@ -9,7 +9,10 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :category_id, presence: true
 
-  has_many :image
+  has_many :product_images
+
+  has_many :images, through: :product_images
+
   has_many :product_properties
   has_many :favorites
 
@@ -25,5 +28,9 @@ class Product < ApplicationRecord
 
   def self.new_products(limit: NEW_PRODUCT_LIMIT)
     self.order(id: :desc).limit(limit)
+  end
+
+  def image_path
+    images.first.path
   end
 end

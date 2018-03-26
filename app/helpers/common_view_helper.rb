@@ -15,7 +15,7 @@ module CommonViewHelper
     products.each do |product|
       tags << content_tag(
         :li,
-        raw("<img src=\"/assets/screenshot 1.png\" alt=\"screenshot 1\" /><h4 class=\"blue\"><a href=\"/#{product.id}/#{product.slug}\">#{product.name}</a></h4>")
+        raw("<img src=\"#{product.image_path}\" alt=\"#{product.name}\" /><h4 class=\"blue\"><a href=\"/#{product.id}/#{product.slug}\">#{product.name}</a></h4>")
       )
     end
 
@@ -29,7 +29,7 @@ module CommonViewHelper
     products.each do |product|
       tags << content_tag(
         :li,
-        raw("<a href=\"/#{product.id}/#{product.slug}\"><img src=\"/assets/screenshot 1.jpg\" alt=\"screenshot 1\" /></a>")
+        raw("<a href=\"/#{product.id}/#{product.slug}\"><img src=\"#{product.image_path}\" alt=\"#{product.name}\" /></a>")
       )
     end
 
@@ -43,7 +43,7 @@ module CommonViewHelper
     products.each do |product|
       tags << content_tag(
         :li,
-        raw("<a href=\"/#{product.id}/#{product.slug}\"><img src=\"/assets/screenshot 1.jpg\" alt=\"screenshot 1\" /></a>")
+        raw("<a href=\"/#{product.id}/#{product.slug}\"><img src=\"#{product.image_path}\" alt=\"#{product.name}\" /></a>")
       )
     end
 

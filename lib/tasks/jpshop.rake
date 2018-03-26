@@ -48,6 +48,12 @@ namespace :jpshop do
           Product.create!(data)
         end
 
+        image_path = row['image'].gsub("\\", "/")
+        Dir.glob("#{Rails.root}/app/assets/#{image_path}/*").each do |path|
+          image = Image.find_or_create_by(path: path.gsub("#{Rails.root}/app/assets/images/", "/assets/"))
+          ProductImage.find_or_create_by(product_id: product_id, image_id: image.id)
+        end
+
         ProductProperty.where(product_id: product_id).destroy_all
 
         unless row['manufacturer'].blank?
