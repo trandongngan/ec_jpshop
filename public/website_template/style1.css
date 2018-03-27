@@ -156,12 +156,17 @@ ul.navigation li a:hover {
 }
 .new_products ul li{
 	display: inline-block;
-	width: 30%;
+	width: 33%;
 	text-align: center;
 }
 .new_products ul li img{
-	width: 300px;
+	width: 250px;
 	height: auto;
+}
+.new_products ul li h4{
+	color: blue;
+	font-size: 14px;
+	white-space: normal;
 }
 
 .know_more_green a { 
@@ -506,6 +511,7 @@ ul.tblRow li {
 }
 .offer_list_header h4 {
 	font-size: 24px;
+	line-height: 22px;
 }
 
 /*list.html*/
