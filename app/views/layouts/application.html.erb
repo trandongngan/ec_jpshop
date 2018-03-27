@@ -7,13 +7,12 @@
     <%= stylesheet_link_tag    'style1' %>
     <!-- <#%= javascript_include_tag 'jquery-3.3.1.min' %> -->
     <%= javascript_include_tag 'jquery.cycle.lite' %>
-
   <body>
     <div id="top_background">
       <div class="main_container">
         <div class='header_bar'>
           <div class="logo">
-            <a href="home.html"><img src="/assets/jp_shop_logo.png" alt="JP Shop"/></a>
+            <a href="/"><img src="/assets/jp_shop_logo.png" alt="JP Shop"/></a>
           </div>
           <div class='search'>
             <form action="/search" method="get">
@@ -104,15 +103,32 @@
         $('#categories').on('change', function() {
           window.location.replace(this.value)
         })
-      });
 
-      JpShop = {
-        onSubmit: function(frm, url) {
-          //$('#' + frm).getFormData()
-          return true
+        $.ajaxSetup({
+          headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+        });
+
+        $.JpShop = {
+          init: function()
+          {
+             var jpshop = this
+             var auth_token = $('meta[name=csrf-token]').attr('content');
+             $("button.add_to_cart").click( function() {
+               var product_id = $(this).attr("data-target");
+               jpshop.addTocart(product_id)
+             });
+          },
+          addTocart: function(product_id) {
+            $.post("/product/" + product_id + "/add_to_cart").done(function(data) {
+              alert( "Sản phẩm đã được thêm vào giỏ hàng");
+            });
+          },
+          addToFavorite: function(product_id) {
+
+          }
         }
-      }
-
+        $.JpShop.init();
+      });
     </script>
   </body>
 </html>

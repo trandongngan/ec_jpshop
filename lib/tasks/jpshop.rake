@@ -22,6 +22,13 @@ namespace :jpshop do
       Category.find_or_create_by(name: row['category_name'])
     end
 
+    spreadsheet = spreadsheets.sheet('Sub-Category')
+    header = spreadsheet.row(1)
+    (2..spreadsheet.last_row).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      Category.find_or_create_by(name: row['sub_category_name'], parent_id: row['category_id'])
+    end
+
     ## import products
     spreadsheet = spreadsheets.sheet('Product')
     header = spreadsheet.row(1)

@@ -6,14 +6,11 @@
     </div>
   </div>
   <div class="content">
+    <% @categories.each do |cate|%>
     <div class="category">
-      <h3>Category 1    <a href='category.html' style='font-size: 12px;'>Xem thêm</a></h3>
-      <%=first_category%>
+      <h3><%=cate.name %>  <a href='/<%=cate.slug %>' style='font-size: 12px;'>Xem thêm</a></h3>
+      <%=slider_category(cate.id)%>
     </div>
-
-    <div class="category">
-      <h3>Category 2    <a href='category.html' style='font-size: 12px;'>Xem thêm</a></h3>
-      <%=second_category%>
-    </div>
+    <% end%>
   </div>
 </div>

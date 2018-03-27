@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post 'my/register' => 'my#create', as: 'create'
 
-  get 'product/add_to_cart'
+  post 'product/:seller_id/add_to_cart' => 'product#add_to_cart'
 
   get 'product/add_to_favorite'
 

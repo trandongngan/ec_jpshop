@@ -7,9 +7,9 @@ class ProductController < ApplicationController
   def search
     category = params[:slug] != 'search' ? Category.find_by(slug: params[:slug]) : nil
 
-    category_id = category.blank? ? nil : category.id
+    ids = category.blank? ? nil : (category.parent_id.blank? ? Category.sub_categories(category.id).pluck(:id) : [category.id])
 
-    @products = Product.search(keyword: params[:keyword], category_id: category_id)
+    @products = Product.search(keyword: params[:keyword], ids: ids)
   end
 
   def offer_list
@@ -17,8 +17,13 @@ class ProductController < ApplicationController
   end
 
   def add_to_cart
-    # product = Product.find_by(id: params[:product_id])
-    Cart.create!(params)
+    seller_product = SellerProduct.find_by(id: params[:seller_id])
+
+    Cart.create!({
+      seller_id: seller_product.id,
+      user_id: current_user.id,
+      amount: 1
+    })
     render json: {}
   end
 
@@ -29,6 +34,6 @@ class ProductController < ApplicationController
 
   private
   def set_product
-    @product = Product.find_by(id: params[:product_id])
+    @product = Product.includes(:images).find_by(id: params[:product_id])
   end
 end

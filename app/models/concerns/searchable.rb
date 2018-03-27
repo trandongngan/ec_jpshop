@@ -7,13 +7,13 @@ module Searchable
     ##
     # search by category, sub-category or product
     ##
-    def search(keyword: nil, category_id: nil)
+    def search(keyword: nil, ids: [])
       # temporary: implement searching directly database
       # future: build searching server (solr or elasticsearch)
 
-      return [] if keyword.blank? && category_id.blank?
+      return [] if keyword.blank? && ids.blank?
 
-      return Product.by_category_id(category_id) unless category_id.blank?
+      return Product.by_category_ids(ids) unless ids.blank?
 
       Product.by_keyword(keyword)
     end

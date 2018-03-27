@@ -18,6 +18,8 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  scope :by_category_ids, ->(ids) { where("category_id IN (:ids)", ids: ids.join(", ")) }
+
   scope :by_category_id, ->(category_id) { where('category_id = :category_id', category_id: category_id) }
 
   scope :by_keyword, ->(keyword) { where("name LIKE ? OR description LIKE ? ", "%#{keyword}%", "%#{keyword}%") }

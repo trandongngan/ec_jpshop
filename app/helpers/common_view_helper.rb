@@ -22,8 +22,9 @@ module CommonViewHelper
     content_tag :ul, tags.join("").html_safe
   end
 
-  def first_category
-    products = Product.by_category_id(3)
+  def slider_category(parent_id)
+    ids = Category.sub_categories(parent_id).pluck(:id)
+    products = Product.by_category_ids(ids)
 
     tags = []
     products.each do |product|
