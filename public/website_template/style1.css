@@ -480,19 +480,24 @@ ul.tblRow {
 	display: inline-block;
 	border-bottom: 1px solid #e0e0e0;
 	width: 19%;
-	
 }
-ul.tblHeader li {
-	font-size: 16px;
+.offer_list_content ul li button{
+	border-bottom-width: 1px;
 	font-style: bold;
-	color: black;
 	background-color: orange;
+	font-size: 14px;
 }
-ul.tblRow li {
-	font-size: 16px;
-	font-style: bold;
-	color: black;
-}
+/* ul.tblHeader li { */
+	/* font-size: 16px; */
+	/* font-style: bold; */
+	/* color: black; */
+	/* background-color: #e6d0c9; */
+/* } */
+/* ul.tblRow li { */
+	/* font-size: 16px; */
+	/* font-style: bold; */
+	/* color: black; */
+/* } */
 
 .offer_list_header{
 	font-size: 14px;
@@ -608,6 +613,7 @@ ul.tblRow li {
 .orders {
 	width: 95%;
 	margin-left: 5%;
+	margin-top: 20px;
 }
 ul.tblRow {
 	margin-top: 15px;
@@ -622,7 +628,7 @@ ul.tblHeader li {
 	font-size: 16px;
 	font-style: bold;
 	color: black;
-	background-color: orange;
+	background-color: #e6d0c9;
 	text-align: center;
 }
 ul.tblRow li {
