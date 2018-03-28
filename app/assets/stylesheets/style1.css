@@ -530,3 +530,7 @@ ul.tblRow li {
 .list ul li button {
 	float: right;
 }
+
+button {
+  cursor: pointer;
+}

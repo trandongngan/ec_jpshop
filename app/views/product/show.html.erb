@@ -4,19 +4,19 @@
   <div class="product_images">
     <h3 style="font-size:24px; line-height:22px; color:orange;"><%=@product.name%></h3>
     <div class="btnAddToListCart">
-      <button onclick="window.location.replace='<%="/#{@product.id}/#{@product.slug}"%>'">Offer list</button><br/><br/>
-      <button id="btnAddToList" onclick="addToList()">Lưu sản phẩm</button>
+      <button onclick="window.location.href='<%="/#{@product.id}/#{@product.slug}"%>'">Offer list</button><br/><br/>
+      <button class="add_to_favorite" data-target="<%=@product.id%>">Lưu sản phẩm</button>
       <span id="save_confirm" style="display:none;"><img src="/assets/confirm_icon.jpg" alt="JP Shop" style="width:auto; height:12px;"/>Đã thêm vào list</span>
     </div>
     <br />
     <div>
       <div>
-        <img id="displayed_image" src="<%@product.image_path%>" style="float:center; display:block; margin-left:auto; margin-right:auto;"/>
+        <img id="displayed_image" src="<%=@product.image_path%>" style="float:center; display:block; margin-left:auto; margin-right:auto;"/>
       </div>
     </div>
     <ul>
       <%@product.images.each do |image|%>
-        <li><a href='#' onclick="displayImage('<%=image.path%>')"><img src="<%=image.path%>" alt="<%=@product.name%>" /></a></li>
+        <li><a href='javascript:void(0)' onclick="displayImage('<%=image.path%>')"><img src="<%=image.path%>" alt="<%=@product.name%>" /></a></li>
       <%end%>
     </ul>
   </div>
@@ -64,22 +64,7 @@
 
     // Diplay image
     function displayImage(imagePath) {
-      var displayedImage = document.getElementById('displayed_image');
-      displayedImage.src = imagePath;
-      <!-- displayedImage.alt = imagePath; -->
-    }
-
-    // them vao list
-    function addToList() {
-      var addToList, saveConfirm;
-      //disable button
-      addToList = document.getElementById("btnAddToList");
-      addToList.style = 'display:none';
-
-      //enable confirm message
-      saveConfirm = document.getElementById("save_confirm");
-      saveConfirm.style = '';
-
+      $("#displayed_image").attr("src", imagePath)
     }
   </script>
 </div>

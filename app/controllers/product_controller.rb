@@ -28,7 +28,10 @@ class ProductController < ApplicationController
   end
 
   def add_to_favorite
-    Favorite.create!(params)
+    Favorite.create!({
+      product_id: params[:product_id],
+      user_id: current_user.id,
+    })
     render json: {}
   end
 

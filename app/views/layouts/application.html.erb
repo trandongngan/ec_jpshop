@@ -114,17 +114,23 @@
              var jpshop = this
              var auth_token = $('meta[name=csrf-token]').attr('content');
              $("button.add_to_cart").click( function() {
+               var seller_id = $(this).attr("data-target");
+               jpshop.addTocart(seller_id)
+             });
+             $("button.add_to_favorite").click( function() {
                var product_id = $(this).attr("data-target");
-               jpshop.addTocart(product_id)
+               jpshop.addToFavorite(product_id)
              });
           },
-          addTocart: function(product_id) {
-            $.post("/product/" + product_id + "/add_to_cart").done(function(data) {
+          addTocart: function(seller_id) {
+            $.post("/product/" + seller_id + "/add_to_cart").done(function(data) {
               alert( "Sản phẩm đã được thêm vào giỏ hàng");
             });
           },
           addToFavorite: function(product_id) {
-
+            $.post("/product/" + product_id + "/add_to_favorite").done(function(data) {
+              alert( "Đã lưu sản phẩm");
+            });
           }
         }
         $.JpShop.init();
