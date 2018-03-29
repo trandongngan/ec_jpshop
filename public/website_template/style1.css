@@ -226,7 +226,7 @@ ul.navigation li a:hover {
 	color: blue; 
 	text-decoration: underline;
 }
-.price_result {font-size: 18px;}
+.price_result {font-size: 16px;}
 
 .content h3 { 
 	font-size: 20px; 
@@ -434,6 +434,14 @@ span.about_but a:hover { background: #4e6188; color: #fff; }
 	height: 50px;
 	box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45);
 }
+img#displayed_image {
+	float:center; 
+	display:block; 
+	margin-left:auto; 
+	margin-right:auto;
+	width: 300px;
+	height: 300px;
+}
 .btnAddToListCart {
 	margin-top: 50px; 
 	margin-right: 50px; 
@@ -441,7 +449,9 @@ span.about_but a:hover { background: #4e6188; color: #fff; }
 }
 .btnAddToListCart button {
 	width: 120px;
+	height: 30px;
 	background-color: orange;
+	font-style: bold;
 }
 
 .tablink {
@@ -485,7 +495,9 @@ ul.tblRow {
 	border-bottom-width: 1px;
 	font-style: bold;
 	background-color: orange;
-	font-size: 14px;
+	font-size: 13px;
+	padding: 1px 10px;
+	margin-left: 30%;
 }
 /* ul.tblHeader li { */
 	/* font-size: 16px; */
@@ -572,8 +584,38 @@ ul.tblRow {
 	width: 150px;
 }
 
+/*payment.html*/
+.payment { 
+	margin: 10px 10px; 
+	width: 40%;
+}
+.payment ul li  { 
+	font-size: 13px; 
+	/* color: #757474; */
+	width: 100%;
+	height: 70px;
+	margin: 0 20px 20px 20px;
+	border-bottom: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+.payment ul li h4 {
+	font-size: 16px;
+	color: orange;
+}
+.payment ul li img { 
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 20px;
+	box-shadow: 0px 0px 5px rgba(1, 10, 18, 0.45); 
+}
+.payment ul li div {
+	float: right;
+	width: 100px;
+}
+
 .sub_total {
-	/* width: 30%; */
+	/* width: 40%; */
 	width: 25%;
 	height: 150px;
 	float: right;
@@ -592,7 +634,8 @@ ul.tblRow {
 	margin-top: 20px;
 	font-size: 16px;
 	font-style: bold;
-	color: #d87553;
+	background-color: orange;
+	padding: 5px 0px;
 }
 
 /*select_address.html*/
@@ -630,9 +673,10 @@ ul.tblHeader li {
 	color: black;
 	background-color: #e6d0c9;
 	text-align: center;
+	padding: 5px 0px;
 }
 ul.tblRow li {
-	font-size: 16px;
+	font-size: 14px;
 	font-style: bold;
 	color: black;
 }
@@ -645,4 +689,59 @@ ul.tblRow li {
 	float: left;
 	margin-right: 10px;
 	
+}
+
+/*style for select_address.html and edit_address.html*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container input[type=text], .container input[type=password] {
+	width: 30%;
+	padding: 5px;
+	margin: 5px 0 10px 0;
+	display: inline-block;
+	height: 30px;
+}
+.container input[type=text]:focus, .container input[type=password]:focus {
+	outline: none;
+}
+
+.container select {
+	width: 30%;
+	padding: 5px;
+	margin: 5px 0 10px 0;
+	display: inline-block;
+	height: 30px;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+.clearfix button {
+	background-color: orange;
+	font-style: bold;
+	font-size: 14px;
+	padding: 5px 20px;
+	margin: 3px 0;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	opacity: 0.9;
+}
+.clearfix button:hover {
+	opacity:1;
+}
+.container {
+	padding: 16px;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.old_address {
+	width: 50%;
+	height: 200px;
+	margin-bottom: 20px;
 }
