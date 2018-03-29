@@ -42,14 +42,14 @@ a {
 } 
 
 #top_background { 
-	/* background: url(images/top_bck.jpg) repeat-x;  */
+	/* background: url(/assets/top_bck.jpg) repeat-x;  */
 }
 
 .main_container  { 
 	margin: 0 auto; 
 	/* width: 960px;   */
 	width: 100%;  
-	/* background: url(images/logo_bck.png) no-repeat;  */
+	/* background: url(/assets/logo_bck.png) no-repeat;  */
 }
 
 /* Main-container classes */
@@ -101,7 +101,7 @@ h1.category_content {
 	display: block; 
 	width: 345px; 
 	height: 50px; 
-	background: url(images/logo.png) no-repeat; 
+	background: url(/assets/logo.png) no-repeat; 
 	text-indent: -9999px; 
 	margin: 16px 0 0 40px; 
 }
@@ -177,14 +177,14 @@ ul.navigation li a:hover {
 	right: -6px; 
 	width: 86px; 
 	height: 74px; 
-	background: url(images/know_more_green.png) no-repeat; 
+	background: url(/assets/know_more_green.png) no-repeat; 
 }
 
 .cta_browse a { 
 	display: block; 
 	width: 168px; 
 	height: 56px; 
-	background: url(images/cta_blu.jpg) no-repeat 0px 0px; 
+	background: url(/assets/cta_blu.jpg) no-repeat 0px 0px; 
 	float: left; 
 	margin: 26px 0 0 10px;
 }
@@ -193,7 +193,7 @@ ul.navigation li a:hover {
 	display: block; 
 	width: 168px; 
 	height: 56px; 
-	background: url(images/cta_blue.jpg) no-repeat 0px 0px; 
+	background: url(/assets/cta_blue.jpg) no-repeat 0px 0px; 
 	float: left; 
 	margin: 26px 0 0 24px; 
 }
@@ -354,7 +354,7 @@ span.trailer_more a {
 	display: block; 
 	width: 83px; 
 	height: 19px; 
-	background: url(images/more.jpg) no-repeat 0px 0px; 
+	background: url(/assets/more.jpg) no-repeat 0px 0px; 
 	float: right; 
 	margin-top: 10px; 
 }
@@ -363,7 +363,7 @@ span.trailer_more a:hover { background-position: 0px -19px; }
 /* Footer */
 
 .footer { 
-	/* background: url(images/foot_bck.jpg) repeat-x; clear: both;  */
+	/* background: url(/assets/foot_bck.jpg) repeat-x; clear: both;  */
 	background: #0c265f; 
 	clear: both;
 	width: 100%;
